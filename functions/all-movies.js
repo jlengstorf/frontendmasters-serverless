@@ -1,10 +1,8 @@
-const fs = require('fs');
-
-const movies = fs.readFileSync(`${__dirname}/../data/movies.json`, 'utf-8');
+const movies = require('../data/movies.json');
 
 exports.handler = async () => {
   return {
     statusCode: 200,
-    body: movies,
+    body: JSON.stringify(movies),
   };
 };
