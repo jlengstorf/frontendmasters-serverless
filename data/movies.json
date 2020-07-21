@@ -1,22 +1,26 @@
 [
   {
-    "id": 1,
-    "title": "Batman vs. Booperman",
-    "body": "Dawn of Justice"
+    "id": "tt2975590",
+    "title": "Batman v. Booperman",
+    "tagline": "Dawn of Justice",
+    "poster": "https://jason.af/fem/img/batman-v-booperman.jpg"
   },
   {
-    "id": 2,
+    "id": "tt0120201",
     "title": "Starship Boopers",
-    "tagline": "A new kind of enemy. A new kind of war."
+    "tagline": "A new kind of enemy. A new kind of war.",
+    "poster": "https://jason.af/fem/img/starship-boopers.jpg"
   },
   {
-    "id": 3,
+    "id": "tt1276104",
     "title": "Booper",
-    "tagline": "Hunted by your future. Haunted by your past."
+    "tagline": "Hunted by your future. Haunted by your past.",
+    "poster": "https://jason.af/fem/img/booper.jpg"
   },
   {
-    "id": 4,
+    "id": "tt1226774",
     "title": "In The Boop",
-    "tagline": "The fate of the world is on the line."
+    "tagline": "The fate of the world is on the line.",
+    "poster": "https://jason.af/fem/img/in-the-boop.jpg"
   }
 ]

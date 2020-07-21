@@ -1,0 +1,77 @@
+<style>
+  h1,
+  form,
+  .message,
+  .logout {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 90vw;
+  }
+
+  .logout {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  label,
+  button {
+    display: block;
+    font-size: 1rem;
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+  }
+
+  label {
+    margin: 0.5rem 0 0;
+    text-transform: lowercase;
+  }
+
+  input {
+    border: 1px solid var(--text-muted);
+    border-radius: 0.25rem;
+    display: block;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  button {
+    background: var(--pink);
+    border: 0;
+    border-radius: 0.25rem;
+    color: var(--white);
+    font-family: var(--font-family);
+    margin: 1rem 0 0;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+  }
+
+  .message {
+    background: var(--yellow);
+    border-radius: 0.25rem;
+    font-family: monospace;
+    padding: 1rem;
+  }
+
+  .message:empty {
+    display: none;
+  }
+</style>
+
+<h1>Add a New Movie</h1>
+
+<div class="message"></div>
+
+<form id="add-movie">
+  <label for="id">IMDb Movie ID <input type="text" id="id" name="id" /></label>
+  <label for="title">Title <input type="text" id="title" name="title" /></label>
+  <label for="tagline"
+    >Tagline <input type="text" id="tagline" name="tagline"
+  /></label>
+  <label for="poster"
+    >Poster <input type="text" id="poster" name="poster"
+  /></label>
+  <button type="submit">Add New Movie</button>
+</form>

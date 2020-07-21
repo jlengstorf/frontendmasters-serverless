@@ -1,0 +1,57 @@
+<style>
+  .movies {
+    display: grid;
+    gap: 6rem 2rem;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+  }
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+  }
+
+  .movie img {
+    display: block;
+    width: 100%;
+  }
+
+  .movie h2 {
+    margin: 0.5rem 0 0;
+  }
+
+  .tagline {
+    margin: 0 0 auto;
+  }
+
+  .movie h3 {
+    font-size: 1rem;
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    margin: 1rem 0 0;
+    text-transform: lowercase;
+  }
+
+  .scores {
+    display: grid;
+    font-size: 0.75rem;
+    font-variant: small-caps;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    letter-spacing: 0.15em;
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    text-transform: lowercase;
+  }
+
+  .source {
+    color: var(--black);
+    display: block;
+    font-size: 0.625rem;
+  }
+</style>
+
+<h1>Movies, Floofed</h1>

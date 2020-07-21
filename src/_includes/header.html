@@ -1,0 +1,145 @@
+<style>
+  .lwj-demo-header {
+    background: var(--black);
+    font-family: var(--font-family);
+    position: relative;
+  }
+
+  .lwj-demo-header .logo-wrapper {
+    align-items: center;
+    display: flex;
+    height: 56px;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    position: relative;
+    width: 100vw;
+  }
+
+  .lwj-demo-header .logo-wrapper::after {
+    background-image: linear-gradient(
+      255deg,
+      var(--black) 0%,
+      var(--black-transparent) 30%
+    );
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    z-index: 10;
+  }
+
+  .lwj-demo-header .logo {
+    display: block;
+    height: auto;
+    position: relative;
+    transform: rotate(-3deg);
+    transition: transform 250ms ease-out;
+    width: 55px;
+    z-index: 15;
+  }
+
+  .lwj-demo-header .logo::after {
+    background: var(--white);
+    border: 1px solid var(--dark-gray);
+    border-radius: 0.25rem;
+    color: var(--dark-gray);
+    content: 'Check out Learn With Jason!';
+    display: block;
+    left: -0.5rem;
+    opacity: 0;
+    padding: 0.5rem;
+    position: absolute;
+    text-align: center;
+    top: 98%;
+    transition: opacity 300ms linear;
+    width: 230px;
+  }
+
+  .lwj-demo-header .logo:active,
+  .lwj-demo-header .logo:focus,
+  .lwj-demo-header .logo:hover {
+    transform: rotate(0deg);
+  }
+
+  .lwj-demo-header .logo:active::after,
+  .lwj-demo-header .logo:focus::after,
+  .lwj-demo-header .logo:hover::after {
+    opacity: 1;
+  }
+
+  .lwj-demo-header .logo img {
+    display: block;
+    width: 100%;
+  }
+
+  .lwj-demo-header .home-link {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 900;
+    margin-left: 0.75rem;
+    position: relative;
+    text-decoration: none;
+    z-index: 15;
+  }
+
+  .lwj-demo-header #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .lwj-demo-header .top-bar {
+    animation: gradient-roll 20s linear infinite alternate;
+    background-image: var(--lwj-gradient);
+    background-size: 200%;
+    border-bottom: 0.5px solid var(--light-gray);
+    height: 9px;
+    position: relative;
+    top: 100%;
+    width: 100vw;
+    z-index: 5;
+  }
+
+  .lwj-demo-header .top-bar::before,
+  .lwj-demo-header .top-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100vw;
+  }
+
+  .lwj-demo-header .top-bar::before {
+    bottom: 1px;
+    height: 0.5px;
+    background-color: var(--light-gray);
+  }
+
+  .lwj-demo-header .top-bar::after {
+    bottom: 0;
+    height: 1px;
+    background-color: var(--black);
+  }
+</style>
+
+<header class="lwj-demo-header">
+  <div class="logo-wrapper">
+    <canvas id="canvas" width="300" height="56"></canvas>
+    <a href="https://www.learnwithjason.dev" class="logo"
+      ><img src="/images/learn-with-jason-dark.svg" alt="Learn With Jason"
+    /></a>
+    <a href="/" rel="home" class="home-link">
+      {{ meta.title }}
+    </a>
+  </div>
+
+  <div class="top-bar"></div>
+</header>
+
+<script type="module">
+  import { startAnimation } from '/js/dots.js';
+
+  startAnimation();
+</script>
