@@ -17,3 +17,24 @@
     width: 300px;
   }
 </style>
+
+<div data-netlify-identity-button></div>
+
+<script
+  type="text/javascript"
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+
+<script>
+  function handleLogin(user) {
+    if (!user || !user.token) {
+      return;
+    }
+
+    // if we get here, we have an active user; redirect to the admin page!
+    window.location.pathname = '/admin/';
+  }
+
+  window.netlifyIdentity.on('init', handleLogin);
+  window.netlifyIdentity.on('login', handleLogin);
+</script>
