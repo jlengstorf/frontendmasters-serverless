@@ -28,6 +28,14 @@ git clone --branch start git@github.com:jlengstorf/frontendmasters-serverless.gi
 git clone --branch start https://github.com/jlengstorf/frontendmasters-serverless.git
 ```
 
+## Get Environment Variables:
+
+Save all of these in `.env`:
+
+- `OMDB_API_KEY` — get this from https://omdbapi.com/
+- `HASURA_API_URL` — get this from https://hasura.io/
+- `HASURA_ADMIN_SECRET` — get this from https://hasura.io/
+
 ## Resources
 
 - [Netlify Functions](https://www.netlify.com/products/functions/?utm_source=fem-sls&utm_medium=functions-jl&utm_campaign=devex)
