@@ -2,6 +2,8 @@
 
 This is the source code for a Frontend Masters course with Jason Lengstorf about serverless functions.
 
+Live site! https://frontendmasters-serverless.netlify.app/
+
 ### [See details](https://frontendmasters.com/workshops/serverless-functions/)
 
 ## The Major Things We’ll Learn in This Workshop
