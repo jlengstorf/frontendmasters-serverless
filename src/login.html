@@ -17,3 +17,21 @@
     width: 300px;
   }
 </style>
+
+<div data-netlify-identity-button></div>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript"></script>
+
+<script>
+  function handleLogin(user) {
+    if (!user || !user.token) {
+      return;
+    }
+
+    // if we get here, it means someone is logged in
+    window.location.pathname = '/admin/';
+  }
+
+  window.netlifyIdentity.on('init', handleLogin);
+  window.netlifyIdentity.on('login', handleLogin);
+</script>
