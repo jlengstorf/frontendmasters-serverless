@@ -65,13 +65,35 @@
 <div class="message"></div>
 
 <form id="add-movie">
-  <label for="id">IMDb Movie ID <input type="text" id="id" name="id" /></label>
-  <label for="title">Title <input type="text" id="title" name="title" /></label>
-  <label for="tagline"
-    >Tagline <input type="text" id="tagline" name="tagline"
-  /></label>
-  <label for="poster"
-    >Poster <input type="text" id="poster" name="poster"
-  /></label>
+  <label for="id">IMDb Movie ID
+    <input id="id" name="id" type="text"/></label>
+  <label for="title">Title
+    <input id="title" name="title" type="text"/></label>
+  <label for="tagline">Tagline
+    <input id="tagline" name="tagline" type="text"/></label>
+  <label for="poster">Poster
+    <input id="poster" name="poster" type="text"/></label>
   <button type="submit">Add New Movie</button>
 </form>
+
+<script>
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+
+    const result = await fetch('/.netlify/functions/add-movie', {
+      method: 'POST',
+      body: JSON.stringify({
+        id: data.get('id'),
+        title: data.get('title'),
+        tagline: data.get('tagline'),
+        poster: data.get('poster'),
+      })
+    }).then((response) => {
+      document.querySelector('.message').innerText = `Response: ${response.status}`;
+    });
+  }
+
+  document.querySelector('#add-movie').addEventListener('submit', handleSubmit);
+</script>
