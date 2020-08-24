@@ -25,7 +25,6 @@ npm install -g netlify-cli@latest
 ```
 
 ```bash
-git clone --branch start git@github.com:jlengstorf/frontendmasters-serverless.git
 # or use HTTPS if you have issues cloning
 git clone --branch start https://github.com/jlengstorf/frontendmasters-serverless.git
 ```
@@ -38,6 +37,8 @@ Save all of these in `.env`:
 - `HASURA_API_URL` — get this from https://hasura.io/
 - `HASURA_ADMIN_SECRET` — get this from https://hasura.io/
 
+Make sure to install dotenv `npm install dotenv` and add `require("dotenv").config()` to each file that uses one of the environment variables.
+
 ## Resources
 
 - [Netlify Functions](https://www.netlify.com/products/functions/?utm_source=fem-sls&utm_medium=functions-jl&utm_campaign=devex)
@@ -45,6 +46,20 @@ Save all of these in `.env`:
 - [Hasura](https://cloud.hasura.io/)
 - [Heroku](https://www.heroku.com/)
 
+## Using Hasura & Heroku to create a secret Admin Key:
+
+- Create a Hasura account, and link it to a Heroku account.
+
+- Go to Settings on your Heroku account, and add config vars HASURA_ADMIN_SECRET and HASURA_GRAPHQL_ADMIN_SECRET.
+  ![Config Var Heroku](/img/config-vars.png)
+
+- On Hasura, once you create a new project, add a new env var, Admin Secret, by clicking on **New Env Var**, and name it Admin Secret.
+  ![Config Var Hasura](/img/env-var.png)
+
+- Launch the Hasura console and make sure that your GraphQL endpoint is no longer public.
+  ![GraphQL Endpoint](/img/GraphQL-endpoint.png)
+
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
