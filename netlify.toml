@@ -2,4 +2,4 @@
   command = "npm run build"
   publish = "_site"
   # indicates where (i.e. which folder) to find functions
-  functions = "functinos"
+  functions = "functions"
